@@ -13,6 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
     initPortfolioFeatures();
     initContactForm();
     initSocialLinks();
+    
+    // 首页标题和副标题动画增强
+    const heroTitle = document.querySelector('.hero-title');
+    const heroSubtitle = document.querySelector('.hero-subtitle');
+    if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        heroTitle.style.animation = 'none';
+        setTimeout(() => {
+            heroTitle.style.animation = '';
+        }, 100);
+    }
+    if (heroSubtitle) {
+        heroSubtitle.style.opacity = '0';
+        heroSubtitle.style.animation = 'none';
+        setTimeout(() => {
+            heroSubtitle.style.animation = '';
+        }, 700);
+    }
 });
 
 // 页面动画初始化
